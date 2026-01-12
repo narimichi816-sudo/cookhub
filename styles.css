@@ -43,6 +43,10 @@ body {
   padding: 16px;
 }
 
+.age-gate.hidden {
+  display: none;
+}
+
 .age-gate__dialog {
   max-width: 420px;
   width: 100%;
