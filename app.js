@@ -129,6 +129,23 @@ const ageYes = document.getElementById("ageYes");
 const ageNo = document.getElementById("ageNo");
 const ageGateMessage = document.getElementById("ageGateMessage");
 const AGE_STORAGE_KEY = "cookhub_age_verified";
+let ageVerifiedFallback = false;
+
+function getAgeVerified() {
+  try {
+    return localStorage.getItem(AGE_STORAGE_KEY) === "true";
+  } catch (error) {
+    return ageVerifiedFallback;
+  }
+}
+
+function setAgeVerified(value) {
+  try {
+    localStorage.setItem(AGE_STORAGE_KEY, value ? "true" : "false");
+  } catch (error) {
+    ageVerifiedFallback = value;
+  }
+}
 
 function normalize(text) {
   return text.toLowerCase();
@@ -238,7 +255,7 @@ function closeAgeGate() {
 }
 
 function handleAgeConfirmed() {
-  localStorage.setItem(AGE_STORAGE_KEY, "true");
+  setAgeVerified(true);
   ageGateMessage.textContent = "";
   closeAgeGate();
   applyFilters();
@@ -252,7 +269,7 @@ ageYes.addEventListener("click", handleAgeConfirmed);
 ageNo.addEventListener("click", handleAgeDenied);
 
 function initAgeGate() {
-  const verified = localStorage.getItem(AGE_STORAGE_KEY) === "true";
+  const verified = getAgeVerified();
   if (verified) {
     applyFilters();
     return;
