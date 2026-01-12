@@ -246,11 +246,14 @@ sortSelect.addEventListener("change", (e) => {
 
 function openAgeGate() {
   ageGate.classList.remove("hidden");
+  ageGate.setAttribute("aria-hidden", "false");
   document.body.classList.add("no-scroll");
+  ageYes.focus();
 }
 
 function closeAgeGate() {
   ageGate.classList.add("hidden");
+  ageGate.setAttribute("aria-hidden", "true");
   document.body.classList.remove("no-scroll");
 }
 
@@ -259,6 +262,7 @@ function handleAgeConfirmed() {
   ageGateMessage.textContent = "";
   closeAgeGate();
   applyFilters();
+  searchInput.focus();
 }
 
 function handleAgeDenied() {
