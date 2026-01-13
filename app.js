@@ -1,6 +1,6 @@
 const recipes = [
   {
-    title: "ネギ塩ダレの鶏むねステーキ",
+    title: "ネギ塩のやさしさにとろける鶏むねステーキ",
     category: "和食",
     tags: ["10分", "主菜", "ヘルシー"],
     time: 12,
@@ -10,7 +10,7 @@ const recipes = [
     image: "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=400&h=300&fit=crop&q=80"
   },
   {
-    title: "フライパンだけ！ビビンバ風炒めご飯",
+    title: "フライパンだけの刺激でビビンバ風が止まらない",
     category: "中華",
     tags: ["がっつり", "15分", "主菜"],
     time: 15,
@@ -20,7 +20,7 @@ const recipes = [
     image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&h=300&fit=crop&q=80"
   },
   {
-    title: "味しみ最高！豚バラ大根",
+    title: "味しみの深さに夢中になる豚バラ大根",
     category: "和食",
     tags: ["作り置き", "主菜"],
     time: 18,
@@ -30,7 +30,7 @@ const recipes = [
     image: "https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&h=300&fit=crop&q=80"
   },
   {
-    title: "鮭とほうれん草のクリームパスタ",
+    title: "クリームの誘惑に溺れる鮭とほうれん草パスタ",
     category: "洋食",
     tags: ["15分", "主菜"],
     time: 14,
@@ -40,7 +40,7 @@ const recipes = [
     image: "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400&h=300&fit=crop&q=80"
   },
   {
-    title: "レンチン4分！白菜とツナの無限サラダ",
+    title: "レンチン4分で無限にハマる白菜ツナサラダ",
     category: "和食",
     tags: ["レンチン", "副菜", "10分"],
     time: 6,
@@ -50,7 +50,7 @@ const recipes = [
     image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop&q=80"
   },
   {
-    title: "痺れる！花椒香る麻婆豆腐",
+    title: "痺れる香りで高まる花椒麻婆豆腐",
     category: "中華",
     tags: ["主菜", "がっつり"],
     time: 20,
@@ -60,7 +60,7 @@ const recipes = [
     image: "https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=400&h=300&fit=crop&q=80"
   },
   {
-    title: "鮭フレークで簡単！和風チャーハン",
+    title: "鮭フレークで簡単にクセになる和風チャーハン",
     category: "中華",
     tags: ["10分", "主菜"],
     time: 10,
@@ -70,7 +70,7 @@ const recipes = [
     image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&h=300&fit=crop&q=80"
   },
   {
-    title: "カリカリ油揚げのねぎ味噌ピザ",
+    title: "カリカリの衝撃に夢中になるねぎ味噌ピザ",
     category: "和食",
     tags: ["副菜", "節約", "10分"],
     time: 8,
@@ -80,7 +80,7 @@ const recipes = [
     image: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop&q=80"
   },
   {
-    title: "鯖缶とトマトのオーブン焼き",
+    title: "鯖缶とトマトが熱く絡むオーブン焼き",
     category: "洋食",
     tags: ["主菜", "作り置き"],
     time: 16,
@@ -90,7 +90,7 @@ const recipes = [
     image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=300&fit=crop&q=80"
   },
   {
-    title: "豆腐ステーキ 香味ポン酢",
+    title: "香味ポン酢でとろける豆腐ステーキ",
     category: "和食",
     tags: ["ヘルシー", "主菜", "10分"],
     time: 9,
@@ -100,7 +100,7 @@ const recipes = [
     image: "https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=400&h=300&fit=crop&q=80"
   },
   {
-    title: "サバ缶カレーうどん",
+    title: "濃厚カレーに夢中になるサバ缶うどん",
     category: "和食",
     tags: ["主菜", "がっつり"],
     time: 13,
