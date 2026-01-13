@@ -129,7 +129,9 @@ const ageYes = document.getElementById("ageYes");
 const ageNo = document.getElementById("ageNo");
 const ageGateMessage = document.getElementById("ageGateMessage");
 const AGE_STORAGE_KEY = "cookhub_age_verified";
+const AGE_SESSION_KEY = "cookhub_age_verified_session";
 let ageVerifiedFallback = false;
+let ageVerifiedSessionFallback = false;
 
 function getAgeVerified() {
   try {
@@ -144,6 +146,22 @@ function setAgeVerified(value) {
     localStorage.setItem(AGE_STORAGE_KEY, value ? "true" : "false");
   } catch (error) {
     ageVerifiedFallback = value;
+  }
+}
+
+function getAgeVerifiedSession() {
+  try {
+    return sessionStorage.getItem(AGE_SESSION_KEY) === "true";
+  } catch (error) {
+    return ageVerifiedSessionFallback;
+  }
+}
+
+function setAgeVerifiedSession(value) {
+  try {
+    sessionStorage.setItem(AGE_SESSION_KEY, value ? "true" : "false");
+  } catch (error) {
+    ageVerifiedSessionFallback = value;
   }
 }
 
@@ -259,6 +277,7 @@ function closeAgeGate() {
 
 function handleAgeConfirmed() {
   setAgeVerified(true);
+  setAgeVerifiedSession(true);
   ageGateMessage.textContent = "";
   closeAgeGate();
   applyFilters();
@@ -274,7 +293,8 @@ ageNo.addEventListener("click", handleAgeDenied);
 
 function initAgeGate() {
   const verified = getAgeVerified();
-  if (verified) {
+  const verifiedThisSession = getAgeVerifiedSession();
+  if (verified && verifiedThisSession) {
     applyFilters();
     return;
   }
